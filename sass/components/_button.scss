@@ -13,11 +13,15 @@
 
         border: none;
         cursor: pointer;
+        -webkit-font-smoothing: subpixel-antialiased;
+        backface-visibility: hidden;
     }
 
     &:hover{
-        transform: translateY(-3px);
+        transform: translateY(-3px) translateZ(0);
         box-shadow: 0 10px 20px rgba($black, .5);
+        backface-visibility: hidden;
+        -webkit-font-smoothing: subpixel-antialiased;
 
         &::after{
             transform: scaleX(1.4) scaleY(1.6);

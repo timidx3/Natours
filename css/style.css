@@ -130,11 +130,15 @@ body {
   transition: all .2s;
   position: relative;
   border: none;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-font-smoothing: subpixel-antialiased;
+  backface-visibility: hidden; }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); }
+  transform: translateY(-3px) translateZ(0);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased; }
   .btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
@@ -542,8 +546,7 @@ body {
     backface-visibility: hidden; }
   .footer__link:hover, .footer__link:active {
     color: #49bb62;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
-    transform: rotate(5deg) scale(1.3); }
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5); }
 
 .footer::before {
   position: absolute;
