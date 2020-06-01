@@ -5,8 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-
-        <script src="https://kit.fontawesome.com/90be8edac3.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/iconfont.css">
         <link rel="stylesheet" href="css/icon-font.css">
         <link rel="stylesheet" href="css/style.css">
@@ -23,17 +21,17 @@
             <div class="navigation__background">&nbsp;</div>
             <nav class="navigation__nav">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About Natours</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your Benefits</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular Tours</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book Now</a></li>
+                    <li class="navigation__item"><a href="#about" class="navigation__link"><span>01</span>About Natours</a></li>
+                    <li class="navigation__item"><a href="#features" class="navigation__link"><span>02</span>Your Benefits</a></li>
+                    <li class="navigation__item"><a href="#tours" class="navigation__link"><span>03</span>Popular Tours</a></li>
+                    <li class="navigation__item"><a href="#stories" class="navigation__link"><span>04</span>Stories</a></li>
+                    <li class="navigation__item"><a href="#booking" class="navigation__link"><span>05</span>Book Now</a></li>
                 </ul>
             </nav>
         </div>
         <header class="header">
             <div class="header__logo-box">
-                <i class="fab fa-pagelines header__logo"></i>
+                <img src="img/logo-white.png" class="header__logo" alt="logo">
             </div>
             <div class="header__text-box">
                 <h1 class="heading-primary">
@@ -45,7 +43,7 @@
         </header>
 
         <main>
-            <section class="section-about">
+            <section id="about" class="section-about">
                 <div class="u-center-text u-margin-bottom-big">
                     <h2 class="heading-secondary">
                         Exciting tours for adventurous people
@@ -69,7 +67,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section-feature">
+            <section id="features" class="section-feature">
                 <div class="row">
                     <div class="col-1-of-4">
                         <div class="feature-box">
@@ -110,7 +108,7 @@
                 </div>
             </section>
 
-            <section class="section-tours">
+            <section id="tours" class="section-tours">
                 <div class="u-center-text u-margin-bottom-big">
                     <h2 class="heading-secondary">
                         Most popular tours
@@ -212,7 +210,7 @@
                     <a href="#" class="btn btn--green">Discover All Tours</a>
                 </div>
             </section>
-            <section class="section-stories">
+            <section id="stories" class="section-stories">
                 <div class="bg-video">
                     <video class="bg-video__content" autoplay muted loop>
                         <source src="img/video.mp4" type="video/mp4">
@@ -259,7 +257,7 @@
                     <a href="#" class="btn-text">Read all stories &rarr;</a>
                 </div>                
             </section>
-            <section class="section-book">
+            <section id="booking" class="section-book">
                 <div class="row">
                     <div class="book">
                         <div class="book__form">
@@ -303,7 +301,7 @@
                 </div>
             </section>
         </main>
-        <footer class="footer">
+        <footer id="footer" class="footer">
             <div class="footer__logo-box">
                 <img src="img/logo-green-2x.png" alt="Full logo-green-2x" class="footer__logo">
             </div>
@@ -328,3 +326,12 @@
         </footer>
     </body>
 </html>
+<script>
+    //Script for hiding menu
+    let checkbox = document.getElementsByClassName("navigation__checkbox")[0];
+    let navMenu = document.getElementsByClassName("navigation__nav")[0];
+    navMenu.addEventListener("click", function () {
+        checkbox.checked = false;
+    });
+    console.log(checkbox, navMenu);
+</script>
