@@ -766,7 +766,10 @@ body {
   margin-top: -11vh;
   z-index: -2;
   width: 100%;
-  height: 128%; }
+  height: 122%; }
+  @media (max-width: 75em) {
+    .footer::before {
+      height: 132%; } }
 
 .navigation__checkbox {
   display: none; }
@@ -917,7 +920,7 @@ body {
     transform: skewY(6deg); }
   @media (max-width: 56.25em) {
     .section-feature {
-      padding: 10rem 3rem; } }
+      padding: 10rem 15rem; } }
 
 .section-tours {
   background-color: #f7f7f7;
@@ -927,7 +930,7 @@ body {
     transform: skewY(6deg); }
   @media (max-width: 56.25em) {
     .section-tours {
-      padding: 10rem 3rem; } }
+      padding: 10rem 6rem; } }
 
 .section-stories {
   position: relative;
@@ -957,7 +960,7 @@ body {
 .section-book::before {
   content: '';
   position: absolute;
-  top: 9.5rem;
+  top: 8rem;
   left: 0;
   width: 100%;
   height: 100%;
