@@ -4,7 +4,6 @@ body {
     font-size: 16px;
     line-height: 1.7;
     color: $grey-dark;
-    padding: 30px;
 }
 
 .heading-primary{
@@ -23,14 +22,25 @@ body {
         animation-name: moveInLeft;
         animation-duration: 1.5s;
         animation-timing-function: ease-out;
+
+        @include responsive(phone)
+        {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
     }
     &--sub{
         display: block;
-        font-size: 20px;
+        font-size: 2rem;
         font-weight: 700;
-        letter-spacing: 17.4px;
+        letter-spacing: 1.75rem;
 
         animation: moveInRight 1.5s ease-out;
+
+        @include responsive(phone)
+        {
+            letter-spacing: 0.5rem;
+        }
     }
 }
 
@@ -49,6 +59,16 @@ body {
     letter-spacing: 2px;
     transition: all .2s;
     text-shadow: .5rem 1rem 2rem rgba($black, .2);
+
+    @include responsive(tab-port)
+    {
+        font-size: 3rem;
+    }
+
+    @include responsive(phone)
+    {
+        font-size: 2.5rem;
+    }
 
     &:hover{
         transform: skewY(-6deg) skewX(2deg);

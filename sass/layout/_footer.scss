@@ -2,17 +2,31 @@
     padding: 5rem 15rem;
     position: relative;
 
+    @include responsive(tab-port){
+        padding: 8rem 3rem;
+    }
+
     &__copyright{
         color: $grey-light-1;
         border-top: 1px solid $grey-dark-2;
         padding-top: 2rem;
         width: 80%;
         float: right;
+
+        @include responsive(tab-port){
+            width: 100%;
+            text-align: center;
+            float: none;
+        }
     }
 
     &__logo-box{
         text-align: center;
         margin-bottom: 8rem;
+
+        @include responsive(tab-port){
+            margin-bottom: 4rem;
+        }
     }
 
     &__logo{
@@ -24,6 +38,11 @@
         border-top: 1px solid $grey-dark-2;
         padding-top: 2rem;
         display: inline-block;
+
+        @include responsive(tab-port){
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__list{
